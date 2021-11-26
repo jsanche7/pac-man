@@ -9,13 +9,13 @@ basic.forever(function () {
     if (input.acceleration(Dimension.X) > 200) {
         pacman.change(LedSpriteProperty.X, 1)
     }
-    if (input.acceleration(Dimension.X) < 200) {
+    if (input.acceleration(Dimension.X) < -200) {
         pacman.change(LedSpriteProperty.X, -1)
     }
     if (input.acceleration(Dimension.Y) > 200) {
         pacman.change(LedSpriteProperty.Y, 1)
     }
-    if (input.acceleration(Dimension.Y) < 200) {
+    if (input.acceleration(Dimension.Y) < -200) {
         pacman.change(LedSpriteProperty.Y, -1)
     }
     if (pacman.isTouching(janaria)) {
@@ -27,9 +27,6 @@ basic.forever(function () {
     if (pacman.isTouching(mamua)) {
         game.gameOver()
     }
-})
-basic.forever(function () {
-	
 })
 basic.forever(function () {
     mamua.move(1)
